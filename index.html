@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manish Dabade | AI & ML Engineer & Full Stack Developer</title>
+    <meta name="description" content="Portfolio of Manish Dabade - Computer Science student specializing in AI/ML and Web Development.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav>
+        <h2>Manish.Dabade</h2>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <header id="home">
+        <div class="profile-container">
+            <img src="manish1.jpeg" alt="Manish Dabade - Profile Photo">
+        </div>
+
+        <div id="txt">
+            <h1>Aspiring  <span style="color: var(--accent);"> AI & ML Engineer.</span></h1>
+            <p>I specialize in creating intelligent systems and high-performance web experiences. Currently exploring the intersection of Artificial Intelligence & Deep Learning.</p>
+        </div>
+    </header>
+
+    <section id="about" class="about">
+        <h2>About Me</h2>
+        <p>"Aspiring <strong>Al & ML </strong> engineer with hands-on experience in developing machine learning and web-based projects, including Al-driven applications. Strong problem-solving skills, knowledge of data science concepts, and a passion for building impactful technology solutions".</p>
+            
+    </section>
+
+    <section id="skills" class="skills">
+        <h2>Skills & Expertise</h2>
+        <div class="skills-grid">
+            <div class="skill-tag">Python</div>
+            <div class="skill-tag">Data Science</div>
+            <div class="skill-tag">Machine Learning</div>
+            <div class="skill-tag">Deep Learning</div>
+            <div class="skill-tag">Java & C++ & C</div>
+            <div class="skill-tag">React</div>
+            <div class="skill-tag">HTML/CSS/JS</div>
+            <div class="skill-tag">MongoDB</div>
+            <div class="skill-tag">Git-Github</div>
+            <div class="skill-tag">MySQL</div>
+            <div class="skill-tag">R language</div>
+            <div class="skill-tag">DSA</div>
+        </div>
+    </section>
+
+    <section id="projects" class="projects">
+        <h2>Selected Projects</h2>
+        <div class="projects-grid">
+            
+            <article class="project-card">
+                <h3>Epileptic Seizure Detection</h3>
+                <p>An advanced Machine Learning framework designed for real-time seizure prediction using EEG data processing. Built to empower healthcare providers with early alerts.</p>
+            </article>
+
+            <article class="project-card" style="border-left: none;">
+                <h3>AI Crop Disease Analysis</h3>
+                <p>Developed a deep learning model to diagnose crop diseases from images. A precision agriculture tool designed to help farmers improve yield sustainability.</p>
+            </article>
+
+            <article class="project-card" style="border-left: none;">
+                <h3>Integrated Calorific Calculator</h3>
+                <p>A full-stack engineering utility for calculating thermal efficiencies. Features a specialized dashboard for thermodynamic data entry and visualization.</p>
+            </article>
+
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2>Get In Touch</h2>
+        <div class="contact-container">
+            
+            <a href="mailto:manishndabade2006@gmail.com" class="contact-card">
+                <i class="fa-solid fa-envelope"></i>
+                <div>
+                    <h4>Email</h4>
+                    <span>manishndabade...</span>
+                </div>
+            </a>
+
+            <a href="https://github.com/ManishDabade45" target="_blank" class="contact-card">
+                <i class="fa-brands fa-github"></i>
+                <div>
+                    <h4>GitHub</h4>
+                    <span>ManishDabade45</span>
+                </div>
+            </a>
+
+            <a href="https://linkedin.com/in/manishdabade" target="_blank" class="contact-card">
+                <i class="fa-brands fa-linkedin"></i>
+                <div>
+                    <h4>LinkedIn</h4>
+                    <span>manishdabade</span>
+                </div>
+            </a>
+
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 • Crafted with passion by Manish Dabade</p>
+    </footer>
+
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = "1";
+                    entry.target.style.transform = "translateY(0)";
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('section, header').forEach((el) => {
+            el.style.opacity = "0";
+            el.style.transform = "translateY(20px)";
+            el.style.transition = "all 0.6s ease-out";
+            observer.observe(el);
+        });
+    </script>
+
+</body>
+</html>
