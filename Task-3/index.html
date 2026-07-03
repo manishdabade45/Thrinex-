@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TaskFlow - Elegant Task Management</title>
+  <!-- Google Fonts: Outfit -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-background">
+    <!-- Ambient glowing backgrounds for modern glassmorphism -->
+    <div class="glow-orb glow-orb-1"></div>
+    <div class="glow-orb glow-orb-2"></div>
+    
+    <div class="app-container">
+      <header class="app-header">
+        <div class="brand">
+          <div class="brand-logo">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 0 1-1.043 3.296 3.745 3.745 0 0 1-3.296 1.043A3.745 3.745 0 0 1 12 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 0 1-3.296-1.043 3.745 3.745 0 0 1-1.043-3.296A3.745 3.745 0 0 1 3 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 0 1 1.043-3.296 3.746 3.746 0 0 1 3.296-1.043A3.746 3.746 0 0 1 12 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 0 1 3.296 1.043 3.746 3.746 0 0 1 1.043 3.296A3.745 3.745 0 0 1 21 12Z" />
+            </svg>
+          </div>
+          <h1>TaskFlow</h1>
+        </div>
+        <p class="tagline">Manage your tasks with clarity and style</p>
+      </header>
+
+      <main class="glass-card">
+        <!-- Add Task Form -->
+        <section class="task-form-section">
+          <form id="task-form" class="task-form" autocomplete="off">
+            <div class="input-group">
+              <input 
+                type="text" 
+                id="task-input" 
+                placeholder="Add a new task..." 
+                required 
+                maxlength="120"
+                aria-label="New Task Input"
+              >
+              <button type="submit" class="btn-primary" aria-label="Add Task">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+                </svg>
+                <span>Add</span>
+              </button>
+            </div>
+            
+            <div class="metadata-selectors">
+              <!-- Category Selector -->
+              <div class="selector">
+                <label for="task-category">Category</label>
+                <select id="task-category">
+                  <option value="Work">💼 Work</option>
+                  <option value="Personal" selected>👤 Personal</option>
+                  <option value="Shopping">🛒 Shopping</option>
+                  <option value="Ideas">💡 Ideas</option>
+                </select>
+              </div>
+
+              <!-- Priority Selector -->
+              <div class="selector">
+                <label for="task-priority">Priority</label>
+                <select id="task-priority">
+                  <option value="Low">🟢 Low</option>
+                  <option value="Medium" selected>🟡 Medium</option>
+                  <option value="High">🔴 High</option>
+                </select>
+              </div>
+
+              <!-- Due Date Selector -->
+              <div class="selector">
+                <label for="task-due-date">Due Date</label>
+                <input type="date" id="task-due-date">
+              </div>
+            </div>
+          </form>
+        </section>
+
+        <!-- Filters and Search Bar -->
+        <section class="controls-section">
+          <div class="search-box">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="search-icon">
+              <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.637 10.637Z" />
+            </svg>
+            <input 
+              type="text" 
+              id="search-input" 
+              placeholder="Search tasks..." 
+              aria-label="Search Tasks"
+            >
+          </div>
+
+          <div class="filter-sort-controls">
+            <!-- Filter Tabs -->
+            <div class="filter-tabs">
+              <button class="filter-tab active" data-filter="all">All</button>
+              <button class="filter-tab" data-filter="active">Active</button>
+              <button class="filter-tab" data-filter="completed">Completed</button>
+            </div>
+
+            <!-- Sort Selector -->
+            <div class="sort-selector">
+              <label for="sort-by">Sort by</label>
+              <select id="sort-by">
+                <option value="createdAt">Date Created</option>
+                <option value="dueDate">Due Date</option>
+                <option value="priority">Priority</option>
+              </select>
+            </div>
+          </div>
+        </section>
+
+        <!-- Task List Container -->
+        <section class="list-section">
+          <ul id="task-list" class="task-list"></ul>
+          
+          <!-- Empty State (Shown dynamically when task list is empty) -->
+          <div id="empty-state" class="empty-state">
+            <div class="empty-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 12h3.75M9 15h3.375c.621 0 1.125-.504 1.125-1.125V11.25c0-.621-.504-1.125-1.125-1.125H9.75M8.25 21h8.25g-8.25 0a1.5 1.5 0 0 1-1.5-1.5V3.75A1.5 1.5 0 0 1 8.25 2.25h8.25a1.5 1.5 0 0 1 1.5 1.5V19.5a1.5 1.5 0 0 1-1.5 1.5m-8.25 0v-1.5M10.5 18h3m-3-3h3m-3-3h3m-3-3h3M9 6.75h3.75" />
+              </svg>
+            </div>
+            <h3>No tasks found</h3>
+            <p>Add some tasks above to clear your mind and boost productivity.</p>
+          </div>
+        </section>
+
+        <!-- Stats and Actions Footer -->
+        <footer class="app-footer">
+          <div class="stats">
+            <span id="items-left">0 tasks remaining</span>
+          </div>
+          <div class="footer-actions">
+            <button id="clear-completed" class="btn-text" aria-label="Clear Completed Tasks">
+              Clear Completed
+            </button>
+          </div>
+        </footer>
+      </main>
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div id="toast-container" class="toast-container"></div>
+
+  <!-- JavaScript -->
+  <script src="app.js"></script>
+</body>
+</html>
