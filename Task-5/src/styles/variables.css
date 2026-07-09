@@ -1,0 +1,66 @@
+:root {
+  /* Common variables */
+  --font-heading: 'Outfit', sans-serif;
+  --font-body: 'Inter', sans-serif;
+  --transition-fast: 0.15s ease;
+  --transition-normal: 0.3s ease;
+  --transition-slow: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  --border-radius-sm: 6px;
+  --border-radius-md: 12px;
+  --border-radius-lg: 20px;
+  --border-radius-full: 9999px;
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.15), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+/* Light Theme Variables */
+html[data-theme="light"] {
+  --color-bg: #fcfbf7;
+  --color-bg-alt: #f3f2ed;
+  --color-card: rgba(255, 255, 255, 0.75);
+  --color-card-solid: #ffffff;
+  --color-border: rgba(0, 0, 0, 0.07);
+  --color-border-hover: rgba(0, 0, 0, 0.15);
+  --color-text: #171717;
+  --color-text-muted: #6f6f6f;
+  --color-text-inverse: #ffffff;
+  --color-primary: #854d0e; /* Deep Antique Gold */
+  --color-primary-hover: #a16207;
+  --color-primary-light: #fef08a;
+  --color-accent: #c2410c; /* Terracotta red-orange */
+  --color-success: #15803d;
+  --color-danger: #b91c1c;
+  
+  --glass-bg: rgba(253, 251, 247, 0.8);
+  --glass-border: rgba(0, 0, 0, 0.06);
+  --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.04);
+  --skeleton-bg: #e5e5e0;
+  --skeleton-highlight: #f5f5f0;
+}
+
+/* Dark Theme Variables */
+html[data-theme="dark"] {
+  --color-bg: #090a0f;
+  --color-bg-alt: #12131a;
+  --color-card: rgba(22, 24, 33, 0.65);
+  --color-card-solid: #161821;
+  --color-border: rgba(255, 255, 255, 0.08);
+  --color-border-hover: rgba(255, 255, 255, 0.18);
+  --color-text: #f3f4f6;
+  --color-text-muted: #9ca3af;
+  --color-text-inverse: #090a0f;
+  --color-primary: #fbbf24; /* Amber Gold */
+  --color-primary-hover: #f59e0b;
+  --color-primary-light: #3e2e08;
+  --color-accent: #f97316; /* Warm Orange */
+  --color-success: #22c55e;
+  --color-danger: #ef4444;
+  
+  --glass-bg: rgba(9, 10, 15, 0.8);
+  --glass-border: rgba(255, 255, 255, 0.08);
+  --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.25);
+  --skeleton-bg: #212330;
+  --skeleton-highlight: #2e3142;
+}
