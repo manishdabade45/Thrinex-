@@ -13,7 +13,6 @@ Welcome to my repository for the **Codsoft Web Development Internship**. This re
 | **Task 3** | [TaskFlow Manager](./Task-3/) | Elegant glassmorphic task management application. | HTML, CSS, JavaScript | [View Folder](./Task-3/) |
 | **Task 4** | [SkyFlow Dashboard](./Task-4/) | Real-time weather dashboard using Open-Meteo API. | HTML, CSS, API, JavaScript | [View Folder](./Task-4/) |
 | **Task 5** | [R.N. Agritech Platform](./Task-5/) | Full-stack e-commerce and consultancy platform. | Express, Node.js, MongoDB, JS | [View Folder](./Task-5/) |
-| **Task 6** | [E-commerce React Catalog](./Task-6/) | React e-commerce catalog with routing & context. | React, Vite, CSS | [View Folder](./Task-6/) |
 
 ---
 
@@ -79,19 +78,6 @@ A full-stack e-commerce and gardening/agricultural services platform that suppor
 
 ---
 
-## 🏅 Task 6: E-commerce Product Catalog (React)
-A modular and optimized product catalog front-end application built with React, demonstrating clean client-side routing and global state management.
-- **Key Features:**
-  - Client-side routing with `react-router-dom` for seamless page transitions.
-  - Context-driven global state management (`CartContext` and `CatalogContext`).
-  - Search, categorization, and sorting filters for products.
-  - Detailed product page with dynamic parameters (`/product/:id`).
-  - Complete cart overview page and checkout summary components.
-- **Tech Stack:** React (Functional Components), Vite, React Router, Vanilla CSS, Context API.
-- **Location:** [`/Task-6/`](./Task-6/)
-
----
-
 ## 🚀 Getting Started
 
 To run any of the client-side portfolios or dashboards (Tasks 1, 2, 3, 4):
@@ -125,18 +111,5 @@ To run the Full-Stack platform (Task 5):
    npm run dev
    ```
 6. Open `Task-5/rnproject/index.html` using a local server.
-
-To run the React Catalog (Task 6):
-1. Navigate to the directory:
-   ```bash
-   cd Task-6
-   ```
-2. Install dependencies and start the development server:
-   ```bash
-   npm install
-   npm run dev
-   ```
-3. Click the local URL (e.g. `http://localhost:5173`) in your terminal.
-
 ---
 *Created as part of the Codsoft Web Development Internship curriculum.*
